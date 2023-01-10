@@ -19,7 +19,7 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		this.productService.save("Vinicius", "DevTop");
+		this.productService.save("Lucas", "Pellisson");
 	}
 
 }
