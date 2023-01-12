@@ -22,16 +22,10 @@ public class GradesController {
         return gradesService.findById(id).get();
     }
 
-    @GetMapping("/grades")
-    public Grades getGradesByStudentId(
-            @RequestParam("id") String id
+    @GetMapping("/grades/student")
+    public List<Grades> findByStudentId(
+            @RequestParam("student_id") Long id
     ) {
-        return gradesService.findById(id).get();
-    }
-    @GetMapping("/grades")
-    public Grades findByStudentId(
-            @RequestParam("student_id") String id
-    ) {
-        return gradesService.findByStudentId(id).get();
+        return gradesService.findByStudentId(id);
     }
 }

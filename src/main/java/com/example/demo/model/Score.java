@@ -4,14 +4,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Score {
-    @JsonProperty("type")
+    @Field("type")
     private String type;
 
-    @JsonProperty("score")
+    @Field("score")
     private Double score;
 }

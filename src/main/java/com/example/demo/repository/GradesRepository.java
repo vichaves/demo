@@ -10,5 +10,4 @@ public interface GradesRepository extends MongoRepository<Grades, String> {
 
     @Query("{student_id: ?0}")
     List<Grades> findByStudentId(Long studentId);
-
 }

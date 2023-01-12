@@ -5,20 +5,20 @@ import com.example.demo.repository.GradesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class GradesService {
 
     @Autowired
-    private GradesRepository productRepository;
-    private GradesService findByStudentId;
+    private GradesRepository gradesRepository;
 
-
-    public Optional<Grades> findById(String id){
-        return this.productRepository.findById(id);
+    public Optional<Grades> findById(String id) {
+        return this.gradesRepository.findById(id);
     }
-    public Optional<Grades> findByStudentId (String id){
-        return this.findByStudentId.findById(id);
+
+    public List<Grades> findByStudentId(Long id) {
+        return this.gradesRepository.findByStudentId(id);
     }
 }
