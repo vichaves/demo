@@ -1,7 +1,7 @@
 package com.example.demo;
 
-import com.example.demo.model.Product;
-import com.example.demo.service.ProductService;
+import com.example.demo.model.Grades;
+import com.example.demo.service.GradesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication implements CommandLineRunner {
 
 	@Autowired
-	private ProductService productService;
+	private GradesService productService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -19,7 +19,7 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		this.productService.save("Lucas", "Pelurso");
+		Grades grades = new Grades();
 	}
 
 }
